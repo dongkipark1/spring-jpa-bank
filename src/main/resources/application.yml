@@ -5,7 +5,11 @@ server:
       charset: utf-8
       force: true
 
+# 테스트 코드에서는 반영이 안되나 보다......
 spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
   datasource:
     url: jdbc:h2:mem:test;MODE=MySQL
     driver-class-name: org.h2.Driver
